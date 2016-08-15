@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:sws="http://www.springframework.org/schema/web-services"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/web-services 
+       http://www.springframework.org/schema/web-services/web-services.xsd">
+
+    <sws:annotation-driven/>
+	<context:component-scan base-package="com.pzv.dataload.service" />
+
+	<bean id="CustomerMaster"
+		class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+		p:portTypeName="CustomerMaster"
+		p:serviceName="LoadCustomersService"
+		p:locationUri="http://${ws.host}:${ws.port}/${ws.context.path}/soap/loadCustomers"
+		p:requestSuffix="Request" 
+		p:responseSuffix="Response"
+		p:faultSuffix="Fault"
+		p:targetNamespace="http://www.phasezeroventures.com/dana/customermaster/definitions"
+		>
+		<property name="schema">
+			<bean class="org.springframework.xml.xsd.SimpleXsdSchema" p:xsd="classpath:/schema/CustomerMasterList.xsd" />
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping">
+		<description>
+			An endpoint mapping strategy that looks for @Endpoint and @PayloadRoot annotations.
+		</description>
+	</bean>
+</beans>

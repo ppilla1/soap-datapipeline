@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.phasezeroventures.com/dana/customermaster/schemas" 
+	xmlns="http://www.phasezeroventures.com/dana/customermaster/schemas" 
+	elementFormDefault="qualified">
+	
+	<xs:element name="LoadCustomerMasterRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="customers" type="CustomerMaster"  maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="CustomerMaster">
+		<xs:sequence>
+			<xs:element name="CustomerNo" type="xs:string" nillable="false"/>
+			<xs:element name="IsActive" type="xs:boolean" nillable="false"/>
+			<xs:element name="CustomerName01" type="xs:string"/>
+			<xs:element name="CustomerName02" type="xs:string"/>
+			<xs:element name="CustomerGroup" type="xs:string"/>
+			<xs:element name="CustomerPriceGroup" type="xs:string"/>
+			<xs:element name="ChannelCode" type="xs:string"/>
+			<xs:element name="SubChannelCode" type="xs:string"/>
+			<xs:element name="Company" type="xs:string"/>
+			<xs:element name="Branch" type="xs:int"/>
+			<xs:element name="AddressLine01" type="xs:string"/>
+			<xs:element name="AddressLine02" type="xs:string"/>
+			<xs:element name="City" type="xs:string"/>
+			<xs:element name="State" type="xs:string"/>
+			<xs:element name="Zip" type="xs:string"/>
+			<xs:element name="Country" type="xs:string"/>
+			<xs:element name="Phone01" type="xs:string"/>
+			<xs:element name="Phone02" type="xs:string"/>
+			<xs:element name="Fax" type="xs:string"/>
+			<xs:element name="Territory" type="xs:string"/>
+			<xs:element name="Email" type="xs:string"/>
+			<xs:element name="Website" type="xs:string"/>
+			<xs:element name="Contact" type="xs:string"/>
+			<xs:element name="ShipVia" type="xs:string"/>
+			<xs:element name="Terms" type="xs:string"/>
+			<xs:element name="Freight" type="xs:string"/>
+			<xs:element name="HandlerCode01" type="xs:string"/>
+			<xs:element name="HandlerCode02" type="xs:string"/>
+			<xs:element name="CreditExempt" type="xs:string"/>
+			<xs:element name="IsShipOnly" type="xs:boolean"/>
+			<xs:element name="IsHold" type="xs:boolean"/>
+			<xs:element name="IsBackOrderAllow" type="xs:boolean"/>
+			<xs:element name="IsInternal" type="xs:boolean"/>
+			<xs:element name="IsVolvo" type="xs:boolean"/>
+			<xs:element name="IsHotShot" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="LoadCustomerMasterResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TotalCustomerReceived" type="xs:long"/>
+				<xs:element name="TotalCustomersLoaded" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

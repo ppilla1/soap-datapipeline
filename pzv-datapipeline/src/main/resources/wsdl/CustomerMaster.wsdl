@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:sch="http://www.phasezeroventures.com/dana/customermaster/schemas"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.phasezeroventures.com/dana/customermaster/definitions"
+	targetNamespace="http://www.phasezeroventures.com/dana/customermaster/definitions">
+	<wsdl:types>
+		<xs:schema
+			xmlns="http://www.phasezeroventures.com/dana/customermaster/schemas"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+			targetNamespace="http://www.phasezeroventures.com/dana/customermaster/schemas">
+
+			<xs:element name="LoadCustomerMasterRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="customers"
+							type="CustomerMaster" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:complexType name="CustomerMaster">
+				<xs:sequence>
+					<xs:element name="CustomerNo" nillable="false" type="xs:string" />
+					<xs:element name="IsActive" nillable="false" type="xs:boolean" />
+					<xs:element name="CustomerName01" type="xs:string" />
+					<xs:element name="CustomerName02" type="xs:string" />
+					<xs:element name="CustomerGroup" type="xs:string" />
+					<xs:element name="CustomerPriceGroup" type="xs:string" />
+					<xs:element name="ChannelCode" type="xs:string" />
+					<xs:element name="SubChannelCode" type="xs:string" />
+					<xs:element name="Company" type="xs:string" />
+					<xs:element name="Branch" type="xs:int" />
+					<xs:element name="AddressLine01" type="xs:string" />
+					<xs:element name="AddressLine02" type="xs:string" />
+					<xs:element name="City" type="xs:string" />
+					<xs:element name="State" type="xs:string" />
+					<xs:element name="Zip" type="xs:string" />
+					<xs:element name="Country" type="xs:string" />
+					<xs:element name="Phone01" type="xs:string" />
+					<xs:element name="Phone02" type="xs:string" />
+					<xs:element name="Fax" type="xs:string" />
+					<xs:element name="Territory" type="xs:string" />
+					<xs:element name="Email" type="xs:string" />
+					<xs:element name="Website" type="xs:string" />
+					<xs:element name="Contact" type="xs:string" />
+					<xs:element name="ShipVia" type="xs:string" />
+					<xs:element name="Terms" type="xs:string" />
+					<xs:element name="Freight" type="xs:string" />
+					<xs:element name="HandlerCode01" type="xs:string" />
+					<xs:element name="HandlerCode02" type="xs:string" />
+					<xs:element name="CreditExempt" type="xs:string" />
+					<xs:element name="IsShipOnly" type="xs:boolean" />
+					<xs:element name="IsHold" type="xs:boolean" />
+					<xs:element name="IsBackOrderAllow" type="xs:boolean" />
+					<xs:element name="IsInternal" type="xs:boolean" />
+					<xs:element name="IsVolvo" type="xs:boolean" />
+					<xs:element name="IsHotShot" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="LoadCustomerMasterResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TotalCustomerReceived" type="xs:long" />
+						<xs:element name="TotalCustomersLoaded" type="xs:long" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="LoadCustomerMasterRequest">
+		<wsdl:part element="sch:LoadCustomerMasterRequest" name="LoadCustomerMasterRequest">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="LoadCustomerMasterResponse">
+		<wsdl:part element="sch:LoadCustomerMasterResponse" name="LoadCustomerMasterResponse">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="CustomerMaster">
+		<wsdl:operation name="LoadCustomerMaster">
+			<wsdl:input message="tns:LoadCustomerMasterRequest" name="LoadCustomerMasterRequest">
+			</wsdl:input>
+			<wsdl:output message="tns:LoadCustomerMasterResponse"
+				name="LoadCustomerMasterResponse">
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="CustomerMasterSoap11" type="tns:CustomerMaster">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="LoadCustomerMaster">
+			<soap:operation soapAction="" />
+			<wsdl:input name="LoadCustomerMasterRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="LoadCustomerMasterResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="LoadCustomersService">
+		<wsdl:port binding="tns:CustomerMasterSoap11" name="CustomerMasterSoap11">
+			<soap:address
+				location="http://${ws.host}:${ws.port}/${ws.context.path}/soap/loadCustomers" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
