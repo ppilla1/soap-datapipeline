@@ -37,21 +37,57 @@
 				<artifactId>maven-jaxb2-plugin</artifactId>
 				<version>${maven-jaxb2.version}</version>
 				<executions>
+					<!--  
 					<execution>
-						<id>customer-schema</id>
+						<id>customermaster-schema</id>
 						<goals>
 							<goal>generate</goal>
 						</goals>
 						<configuration>
 							<schemaLanguage>WSDL</schemaLanguage>
 							<generateDirectory>src/main/java</generateDirectory>
-							<generatePackage>com.mycompany.holiday.modelcom.pzv.dataload.model.dana.aftermarket.customermaster</generatePackage>
+							<generatePackage>com.pzv.dataload.model.dana.aftermarket.customermaster</generatePackage>
 							<schemaDirectory>src/main/resources/wsdl</schemaDirectory>
 							<schemaIncludes>
 								<include>CustomerMaster.wsdl</include>
 							</schemaIncludes>
 						</configuration>
 					</execution>
+					-->
+					<!--  
+					<execution>
+						<id>partmaster-schema</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemaLanguage>WSDL</schemaLanguage>
+							<generateDirectory>src/main/java</generateDirectory>
+							<generatePackage>com.pzv.dataload.model.dana.aftermarket.partmaster</generatePackage>
+							<schemaDirectory>src/main/resources/wsdl</schemaDirectory>
+							<schemaIncludes>
+								<include>PartMaster.wsdl</include>
+							</schemaIncludes>
+						</configuration>
+					</execution>
+					-->
+					<!--  
+					<execution>
+						<id>rtb-schema</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemaLanguage>WSDL</schemaLanguage>
+							<generateDirectory>src/main/java</generateDirectory>
+							<generatePackage>com.pzv.dataload.model.dana.aftermarket.rtb</generatePackage>
+							<schemaDirectory>src/main/resources/wsdl</schemaDirectory>
+							<schemaIncludes>
+								<include>RTB.wsdl</include>
+							</schemaIncludes>
+						</configuration>
+					</execution>
+					-->
 				</executions>
 			</plugin>
 		</plugins>

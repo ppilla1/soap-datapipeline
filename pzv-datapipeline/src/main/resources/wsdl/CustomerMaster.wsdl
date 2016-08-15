@@ -62,7 +62,7 @@
 			<xs:element name="LoadCustomerMasterResponse">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="TotalCustomerReceived" type="xs:long" />
+						<xs:element name="TotalCustomersReceived" type="xs:long" />
 						<xs:element name="TotalCustomersLoaded" type="xs:long" />
 					</xs:sequence>
 				</xs:complexType>
@@ -70,20 +70,20 @@
 		</xs:schema>
 	</wsdl:types>
 	<wsdl:message name="LoadCustomerMasterRequest">
-		<wsdl:part element="sch:LoadCustomerMasterRequest" name="LoadCustomerMasterRequest">
-		</wsdl:part>
+		<wsdl:part element="sch:LoadCustomerMasterRequest" name="LoadCustomerMasterRequest" />
+
 	</wsdl:message>
 	<wsdl:message name="LoadCustomerMasterResponse">
-		<wsdl:part element="sch:LoadCustomerMasterResponse" name="LoadCustomerMasterResponse">
-		</wsdl:part>
+		<wsdl:part element="sch:LoadCustomerMasterResponse" name="LoadCustomerMasterResponse" />
+
 	</wsdl:message>
 	<wsdl:portType name="CustomerMaster">
 		<wsdl:operation name="LoadCustomerMaster">
-			<wsdl:input message="tns:LoadCustomerMasterRequest" name="LoadCustomerMasterRequest">
-			</wsdl:input>
+			<wsdl:input message="tns:LoadCustomerMasterRequest" name="LoadCustomerMasterRequest" />
+
 			<wsdl:output message="tns:LoadCustomerMasterResponse"
-				name="LoadCustomerMasterResponse">
-			</wsdl:output>
+				name="LoadCustomerMasterResponse" />
+
 		</wsdl:operation>
 	</wsdl:portType>
 	<wsdl:binding name="CustomerMasterSoap11" type="tns:CustomerMaster">

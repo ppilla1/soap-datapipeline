@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.phasezeroventures.com/dana/partmaster/schemas" 
+	xmlns="http://www.phasezeroventures.com/dana/partmaster/schemas" 
+	elementFormDefault="qualified">
+	
+	<xs:element name="LoadPartMasterRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="parts" type="PartMaster" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="PartMaster">
+		<xs:sequence>
+			<xs:element name="PartNo" type="xs:string" nillable="false"/>
+			<xs:element name="IsActive" type="xs:boolean" nillable="false"/>
+			<xs:element name="PartStatus" type="xs:short"/>
+			<xs:element name="SupersededPartNo" type="xs:string"/>
+			<xs:element name="Description01" type="xs:string"/>
+			<xs:element name="Description02" type="xs:string"/>
+			<xs:element name="Category" type="xs:string"/>
+			<xs:element name="ProductHierarchy" type="xs:string"/>
+			<xs:element name="PriceListGroup" type="xs:string"/>
+			<xs:element name="RTBGroup" type="xs:string"/>
+			<xs:element name="MinQty" type="xs:long"/>
+			<xs:element name="PackageQty" type="xs:long"/>
+			<xs:element name="UnitOfMeasurement" type="xs:string"/>
+			<xs:element name="Weight" type="xs:decimal"/>
+			<xs:element name="Country" type="xs:string"/>
+			<xs:element name="OEMFlag" type="xs:string"/>
+			<xs:element name="LeadTimeInDays" type="xs:int"/>
+			<xs:element name="IsReturnable" type="xs:boolean"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="LoadPartMasterResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TotalPartsReceived" type="xs:long"/>
+				<xs:element name="TotalPartsLoaded" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>

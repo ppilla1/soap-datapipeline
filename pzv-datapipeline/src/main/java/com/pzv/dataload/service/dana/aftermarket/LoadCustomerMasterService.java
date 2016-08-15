@@ -9,8 +9,9 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-import com.mycompany.holiday.modelcom.pzv.dataload.model.dana.aftermarket.customermaster.LoadCustomerMasterRequest;
-import com.mycompany.holiday.modelcom.pzv.dataload.model.dana.aftermarket.customermaster.LoadCustomerMasterResponse;
+import com.pzv.dataload.model.dana.aftermarket.customermaster.LoadCustomerMasterRequest;
+import com.pzv.dataload.model.dana.aftermarket.customermaster.LoadCustomerMasterResponse;
+
 
 @Endpoint
 public class LoadCustomerMasterService implements LoadCustomerMaster {
@@ -22,7 +23,7 @@ public class LoadCustomerMasterService implements LoadCustomerMaster {
 		
 		LoadCustomerMasterResponse response = new LoadCustomerMasterResponse();
 		long totalReceived = Objects.nonNull(request.getCustomers()) && !request.getCustomers().isEmpty()?request.getCustomers().size():0;
-		response.setTotalCustomerReceived(totalReceived);
+		response.setTotalCustomersReceived(totalReceived);
 		response.setTotalCustomersLoaded(totalReceived);
 		
 		LOG.info("LoadCustomerMasterRequest\n{}",request);

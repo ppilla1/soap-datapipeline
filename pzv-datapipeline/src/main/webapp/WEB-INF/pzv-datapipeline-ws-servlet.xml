@@ -30,6 +30,36 @@
 		</property>
 	</bean>
 
+	<bean id="PartMaster"
+		class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+		p:portTypeName="PartMaster"
+		p:serviceName="LoadPartsService"
+		p:locationUri="http://${ws.host}:${ws.port}/${ws.context.path}/soap/loadParts"
+		p:requestSuffix="Request" 
+		p:responseSuffix="Response"
+		p:faultSuffix="Fault"
+		p:targetNamespace="http://www.phasezeroventures.com/dana/partmaster/definitions"
+		>
+		<property name="schema">
+			<bean class="org.springframework.xml.xsd.SimpleXsdSchema" p:xsd="classpath:/schema/PartMasterList.xsd" />
+		</property>
+	</bean>
+
+	<bean id="RTB"
+		class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+		p:portTypeName="RTB"
+		p:serviceName="LoadRTBService"
+		p:locationUri="http://${ws.host}:${ws.port}/${ws.context.path}/soap/loadRTBDetails"
+		p:requestSuffix="Request" 
+		p:responseSuffix="Response"
+		p:faultSuffix="Fault"
+		p:targetNamespace="http://www.phasezeroventures.com/dana/rtb/definitions"
+		>
+		<property name="schema">
+			<bean class="org.springframework.xml.xsd.SimpleXsdSchema" p:xsd="classpath:/schema/RTBDetailsList.xsd" />
+		</property>
+	</bean>
+
 	<bean
 		class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping">
 		<description>

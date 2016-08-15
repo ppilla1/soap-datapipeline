@@ -56,7 +56,7 @@
 	<xs:element name="LoadCustomerMasterResponse">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="TotalCustomerReceived" type="xs:long"/>
+				<xs:element name="TotalCustomersReceived" type="xs:long"/>
 				<xs:element name="TotalCustomersLoaded" type="xs:long"/>
 			</xs:sequence>
 		</xs:complexType>

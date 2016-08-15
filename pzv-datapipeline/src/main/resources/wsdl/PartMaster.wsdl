@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:sch="http://www.phasezeroventures.com/dana/partmaster/schemas"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.phasezeroventures.com/dana/partmaster/definitions"
+	targetNamespace="http://www.phasezeroventures.com/dana/partmaster/definitions">
+	<wsdl:types>
+		<xs:schema xmlns="http://www.phasezeroventures.com/dana/partmaster/schemas"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+			targetNamespace="http://www.phasezeroventures.com/dana/partmaster/schemas">
+
+			<xs:element name="LoadPartMasterRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="parts" type="PartMaster" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:complexType name="PartMaster">
+				<xs:sequence>
+					<xs:element name="PartNo" nillable="false" type="xs:string" />
+					<xs:element name="IsActive" nillable="false" type="xs:boolean" />
+					<xs:element name="PartStatus" type="xs:short" />
+					<xs:element name="SupersededPartNo" type="xs:string" />
+					<xs:element name="Description01" type="xs:string" />
+					<xs:element name="Description02" type="xs:string" />
+					<xs:element name="Category" type="xs:string" />
+					<xs:element name="ProductHierarchy" type="xs:string" />
+					<xs:element name="PriceListGroup" type="xs:string" />
+					<xs:element name="RTBGroup" type="xs:string" />
+					<xs:element name="MinQty" type="xs:long" />
+					<xs:element name="PackageQty" type="xs:long" />
+					<xs:element name="UnitOfMeasurement" type="xs:string" />
+					<xs:element name="Weight" type="xs:decimal" />
+					<xs:element name="Country" type="xs:string" />
+					<xs:element name="OEMFlag" type="xs:string" />
+					<xs:element name="LeadTimeInDays" type="xs:int" />
+					<xs:element name="IsReturnable" type="xs:boolean" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="LoadPartMasterResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TotalPartsReceived" type="xs:long" />
+						<xs:element name="TotalPartsLoaded" type="xs:long" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="LoadPartMasterRequest">
+		<wsdl:part element="sch:LoadPartMasterRequest" name="LoadPartMasterRequest" />
+
+	</wsdl:message>
+	<wsdl:message name="LoadPartMasterResponse">
+		<wsdl:part element="sch:LoadPartMasterResponse" name="LoadPartMasterResponse" />
+
+	</wsdl:message>
+	<wsdl:portType name="PartMaster">
+		<wsdl:operation name="LoadPartMaster">
+			<wsdl:input message="tns:LoadPartMasterRequest" name="LoadPartMasterRequest" />
+
+			<wsdl:output message="tns:LoadPartMasterResponse" name="LoadPartMasterResponse" />
+
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="PartMasterSoap11" type="tns:PartMaster">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="LoadPartMaster">
+			<soap:operation soapAction="" />
+			<wsdl:input name="LoadPartMasterRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="LoadPartMasterResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="LoadPartsService">
+		<wsdl:port binding="tns:PartMasterSoap11" name="PartMasterSoap11">
+			<soap:address
+				location="http://${ws.host}:${ws.port}/${ws.context.path}/soap/loadParts" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.phasezeroventures.com/dana/rtb/schemas" 
+	xmlns="http://www.phasezeroventures.com/dana/rtb/schemas" 
+	elementFormDefault="qualified">
+	
+	<xs:element name="LoadRTBRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="rtbs" type="RTBDetail" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="RTBDetail">
+		<xs:sequence>
+			<xs:element name="ShipToCustomerId" type="xs:string"/>
+			<xs:element name="SalesOrg" type="xs:string"/>
+			<xs:element name="Type" type="xs:boolean"/>
+			<xs:element name="RTBGroup" type="xs:string"/>
+			<xs:element name="ValidFrom" type="xs:date"/>
+			<xs:element name="ValidTo" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="LoadRTBResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TotalRTBDetailsReceived" type="xs:long"/>
+				<xs:element name="TotalRTBDetailsLoaded" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>
