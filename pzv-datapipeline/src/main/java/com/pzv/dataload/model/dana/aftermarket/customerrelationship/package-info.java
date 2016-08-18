@@ -5,5 +5,5 @@
 // Generated on: 2016.08.18 at 09:49:51 AM IST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.phasezeroventures.com/dana/rtb/schemas", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.pzv.dataload.model.dana.aftermarket.rtb;
+@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.phasezeroventures.com/dana/customerrelationship/schemas", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+package com.pzv.dataload.model.dana.aftermarket.customerrelationship;

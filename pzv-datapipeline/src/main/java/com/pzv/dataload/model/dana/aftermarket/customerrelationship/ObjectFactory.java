@@ -6,7 +6,7 @@
 //
 
 
-package com.pzv.dataload.model.dana.aftermarket.rtb;
+package com.pzv.dataload.model.dana.aftermarket.customerrelationship;
 
 import javax.xml.bind.annotation.XmlRegistry;
 
@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlRegistry;
 /**
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
- * generated in the com.pzv.dataload.model.dana.aftermarket.rtb package. 
+ * generated in the com.pzv.dataload.model.dana.aftermarket.customerrelationship package. 
  * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
@@ -30,34 +30,34 @@ public class ObjectFactory {
 
 
     /**
-     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.pzv.dataload.model.dana.aftermarket.rtb
+     * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.pzv.dataload.model.dana.aftermarket.customerrelationship
      * 
      */
     public ObjectFactory() {
     }
 
     /**
-     * Create an instance of {@link LoadRTBRequest }
+     * Create an instance of {@link LoadCustomerRelationshipRequest }
      * 
      */
-    public LoadRTBRequest createLoadRTBRequest() {
-        return new LoadRTBRequest();
+    public LoadCustomerRelationshipRequest createLoadCustomerRelationshipRequest() {
+        return new LoadCustomerRelationshipRequest();
     }
 
     /**
-     * Create an instance of {@link RTBDetail }
+     * Create an instance of {@link CustomerRelationship }
      * 
      */
-    public RTBDetail createRTBDetail() {
-        return new RTBDetail();
+    public CustomerRelationship createCustomerRelationship() {
+        return new CustomerRelationship();
     }
 
     /**
-     * Create an instance of {@link LoadRTBResponse }
+     * Create an instance of {@link LoadCustomerRelationshipResponse }
      * 
      */
-    public LoadRTBResponse createLoadRTBResponse() {
-        return new LoadRTBResponse();
+    public LoadCustomerRelationshipResponse createLoadCustomerRelationshipResponse() {
+        return new LoadCustomerRelationshipResponse();
     }
 
 }

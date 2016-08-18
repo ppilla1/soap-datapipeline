@@ -6,7 +6,7 @@
 //
 
 
-package com.pzv.dataload.model.dana.aftermarket.rtb;
+package com.pzv.dataload.model.dana.aftermarket.customerrelationship;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="rtbs" type="{http://www.phasezeroventures.com/dana/rtb/schemas}RTBDetail" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="relationships" type="{http://www.phasezeroventures.com/dana/customerrelationship/schemas}CustomerRelationship" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,41 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "rtbs"
+    "relationships"
 })
-@XmlRootElement(name = "LoadRTBRequest")
-public class LoadRTBRequest {
+@XmlRootElement(name = "LoadCustomerRelationshipRequest")
+public class LoadCustomerRelationshipRequest {
 
     @XmlElement(required = true)
-    protected List<RTBDetail> rtbs;
+    protected List<CustomerRelationship> relationships;
 
     /**
-     * Gets the value of the rtbs property.
+     * Gets the value of the relationships property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the rtbs property.
+     * This is why there is not a <CODE>set</CODE> method for the relationships property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getRtbs().add(newItem);
+     *    getRelationships().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link RTBDetail }
+     * {@link CustomerRelationship }
      * 
      * 
      */
-    public List<RTBDetail> getRtbs() {
-        if (rtbs == null) {
-            rtbs = new ArrayList<RTBDetail>();
+    public List<CustomerRelationship> getRelationships() {
+        if (relationships == null) {
+            relationships = new ArrayList<CustomerRelationship>();
         }
-        return this.rtbs;
+        return this.relationships;
     }
 
 }

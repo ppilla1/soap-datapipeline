@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.phasezeroventures.com/dana/customerrelationship/schemas" 
+	xmlns="http://www.phasezeroventures.com/dana/customerrelationship/schemas" 
+	elementFormDefault="qualified">
+	
+	<xs:element name="LoadCustomerRelationshipRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="relationships" type="CustomerRelationship"  maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="CustomerRelationship">
+		<xs:sequence>
+			<xs:element name="DealerCode" type="xs:string" nillable="false"/>
+			<xs:element name="BillToCustomerNo" type="xs:string" nillable="false" default="na"/>
+			<xs:element name="ShipToCustomerNo" type="xs:string" nillable="false" default="na"/>
+			<xs:element name="MailToCustomerNo" type="xs:string" nillable="false" default="na"/>
+			<xs:element name="Channel" type="xs:string"/>
+			<xs:element name="ChannelNumber" type="xs:string"/>
+			<xs:element name="Route" type="xs:boolean"/>
+			<xs:element name="Payer" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+			
+	<xs:element name="LoadCustomerRelationshipResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TotalCustomerRelationshipsReceived" type="xs:long"/>
+				<xs:element name="TotalCustomerRelationshipsLoaded" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -18,12 +18,13 @@
 
 			<xs:complexType name="RTBDetail">
 				<xs:sequence>
-					<xs:element name="ShipToCustomerId" type="xs:string" />
+					<xs:element name="ShipToCustomerId" nillable="false"
+						type="xs:string" />
 					<xs:element name="SalesOrg" type="xs:string" />
 					<xs:element name="Type" type="xs:boolean" />
-					<xs:element name="RTBGroup" type="xs:string" />
-					<xs:element name="ValidFrom" type="xs:date" />
-					<xs:element name="ValidTo" type="xs:date" />
+					<xs:element name="RTBGroup" nillable="false" type="xs:string" />
+					<xs:element name="ValidFrom" nillable="false" type="xs:date" />
+					<xs:element name="ValidTo" nillable="false" type="xs:date" />
 				</xs:sequence>
 			</xs:complexType>
 

@@ -71,7 +71,7 @@
 						</configuration>
 					</execution>
 					-->
-					<!--  
+					<!--  					
 					<execution>
 						<id>rtb-schema</id>
 						<goals>
@@ -84,6 +84,23 @@
 							<schemaDirectory>src/main/resources/wsdl</schemaDirectory>
 							<schemaIncludes>
 								<include>RTB.wsdl</include>
+							</schemaIncludes>
+						</configuration>
+					</execution>
+					-->
+					<!--  					
+					<execution>
+						<id>customerrelationship-schema</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemaLanguage>WSDL</schemaLanguage>
+							<generateDirectory>src/main/java</generateDirectory>
+							<generatePackage>com.pzv.dataload.model.dana.aftermarket.customerrelationship</generatePackage>
+							<schemaDirectory>src/main/resources/wsdl</schemaDirectory>
+							<schemaIncludes>
+								<include>CustomerRelationship.wsdl</include>
 							</schemaIncludes>
 						</configuration>
 					</execution>

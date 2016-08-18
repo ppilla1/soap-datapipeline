@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:sch="http://www.phasezeroventures.com/dana/customerrelationship/schemas"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.phasezeroventures.com/dana/customerrelationship/definitions"
+	targetNamespace="http://www.phasezeroventures.com/dana/customerrelationship/definitions">
+	<wsdl:types>
+		<xs:schema
+			xmlns="http://www.phasezeroventures.com/dana/customerrelationship/schemas"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+			targetNamespace="http://www.phasezeroventures.com/dana/customerrelationship/schemas">
+
+			<xs:element name="LoadCustomerRelationshipRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="relationships"
+							type="CustomerRelationship" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:complexType name="CustomerRelationship">
+				<xs:sequence>
+					<xs:element name="DealerCode" nillable="false" type="xs:string" />
+					<xs:element default="na" name="BillToCustomerNo"
+						nillable="false" type="xs:string" />
+					<xs:element default="na" name="ShipToCustomerNo"
+						nillable="false" type="xs:string" />
+					<xs:element default="na" name="MailToCustomerNo"
+						nillable="false" type="xs:string" />
+					<xs:element name="Channel" type="xs:string" />
+					<xs:element name="ChannelNumber" type="xs:string" />
+					<xs:element name="Route" type="xs:boolean" />
+					<xs:element name="Payer" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="LoadCustomerRelationshipResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TotalCustomerRelationshipsReceived"
+							type="xs:long" />
+						<xs:element name="TotalCustomerRelationshipsLoaded"
+							type="xs:long" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="LoadCustomerRelationshipResponse">
+		<wsdl:part element="sch:LoadCustomerRelationshipResponse"
+			name="LoadCustomerRelationshipResponse" />
+
+	</wsdl:message>
+	<wsdl:message name="LoadCustomerRelationshipRequest">
+		<wsdl:part element="sch:LoadCustomerRelationshipRequest"
+			name="LoadCustomerRelationshipRequest" />
+
+	</wsdl:message>
+	<wsdl:portType name="CustomerRelationship">
+		<wsdl:operation name="LoadCustomerRelationship">
+			<wsdl:input message="tns:LoadCustomerRelationshipRequest"
+				name="LoadCustomerRelationshipRequest" />
+
+			<wsdl:output message="tns:LoadCustomerRelationshipResponse"
+				name="LoadCustomerRelationshipResponse" />
+
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="CustomerRelationshipSoap11" type="tns:CustomerRelationship">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="LoadCustomerRelationship">
+			<soap:operation soapAction="" />
+			<wsdl:input name="LoadCustomerRelationshipRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="LoadCustomerRelationshipResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="LoadCustomerRelationshipService">
+		<wsdl:port binding="tns:CustomerRelationshipSoap11" name="CustomerRelationshipSoap11">
+			<soap:address
+				location="http://${ws.host}:${ws.port}/${ws.context.path}/soap/loadCustomerRelationships" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

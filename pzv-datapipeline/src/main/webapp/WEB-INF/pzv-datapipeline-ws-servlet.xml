@@ -60,6 +60,21 @@
 		</property>
 	</bean>
 
+	<bean id="CustomerRelationship"
+		class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+		p:portTypeName="CustomerRelationship"
+		p:serviceName="LoadCustomerRelationshipService"
+		p:locationUri="http://${ws.host}:${ws.port}/${ws.context.path}/soap/loadCustomerRelationships"
+		p:requestSuffix="Request" 
+		p:responseSuffix="Response"
+		p:faultSuffix="Fault"
+		p:targetNamespace="http://www.phasezeroventures.com/dana/customerrelationship/definitions"
+		>
+		<property name="schema">
+			<bean class="org.springframework.xml.xsd.SimpleXsdSchema" p:xsd="classpath:/schema/CustomerRelationshipList.xsd" />
+		</property>
+	</bean>
+
 	<bean
 		class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping">
 		<description>
