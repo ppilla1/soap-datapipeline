@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
+import org.springframework.ws.server.endpoint.annotation.RequestPayload;
+import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import com.pzv.dataload.model.dana.aftermarket.customerrelationship.LoadCustomerRelationshipRequest;
 import com.pzv.dataload.model.dana.aftermarket.customerrelationship.LoadCustomerRelationshipResponse;
@@ -16,7 +18,7 @@ public class LoadCustomerRelationshipService implements LoadCustomerRelationship
 	
 	@PayloadRoot(localPart=LOADCUSTOMERRELATIONSHIP_REQ_QNAME,namespace=NAMESPACE_URI)
 	@Override
-	public LoadCustomerRelationshipResponse loadCustomerRelationships(LoadCustomerRelationshipRequest request) {
+	public @ResponsePayload LoadCustomerRelationshipResponse loadCustomerRelationships(@RequestPayload LoadCustomerRelationshipRequest request) {
 		LoadCustomerRelationshipResponse response = new LoadCustomerRelationshipResponse();
 		long totalRecv = Objects.nonNull(request.getRelationships()) && !request.getRelationships().isEmpty()?request.getRelationships().size():0;
 		
