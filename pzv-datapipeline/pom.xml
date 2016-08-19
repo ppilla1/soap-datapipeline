@@ -105,6 +105,23 @@
 						</configuration>
 					</execution>
 					-->
+					<!--			
+					<execution>
+						<id>vendor-schema</id>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<schemaLanguage>WSDL</schemaLanguage>
+							<generateDirectory>src/main/java</generateDirectory>
+							<generatePackage>com.pzv.dataload.model.dana.aftermarket.vendor</generatePackage>
+							<schemaDirectory>src/main/resources/wsdl</schemaDirectory>
+							<schemaIncludes>
+								<include>Vendor.wsdl</include>
+							</schemaIncludes>
+						</configuration>
+					</execution>
+					-->		  
 				</executions>
 			</plugin>
 		</plugins>

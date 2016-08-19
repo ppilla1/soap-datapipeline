@@ -75,6 +75,21 @@
 		</property>
 	</bean>
 
+	<bean id="Vendor"
+		class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition"
+		p:portTypeName="Vendor"
+		p:serviceName="LoadVendorService"
+		p:locationUri="http://${ws.host}:${ws.port}/${ws.context.path}/soap/loadVendors"
+		p:requestSuffix="Request" 
+		p:responseSuffix="Response"
+		p:faultSuffix="Fault"
+		p:targetNamespace="http://www.phasezeroventures.com/dana/vendor/definitions"
+		>
+		<property name="schema">
+			<bean class="org.springframework.xml.xsd.SimpleXsdSchema" p:xsd="classpath:/schema/VendorList.xsd" />
+		</property>
+	</bean>
+
 	<bean
 		class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping">
 		<description>

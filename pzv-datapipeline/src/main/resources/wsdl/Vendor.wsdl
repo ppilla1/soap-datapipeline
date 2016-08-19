@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:sch="http://www.phasezeroventures.com/dana/vendor/schemas"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.phasezeroventures.com/dana/vendor/definitions"
+	targetNamespace="http://www.phasezeroventures.com/dana/vendor/definitions">
+	<wsdl:types>
+		<xs:schema xmlns="http://www.phasezeroventures.com/dana/vendor/schemas"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+			targetNamespace="http://www.phasezeroventures.com/dana/vendor/schemas">
+
+			<xs:element name="LoadVendorsRequest">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element maxOccurs="unbounded" name="vendors" type="Vendor" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+
+			<xs:complexType name="Vendor">
+				<xs:sequence>
+					<xs:element name="GroupName" nillable="false" type="xs:string" />
+					<xs:element name="GroupValue" nillable="false" type="xs:string" />
+					<xs:element name="IsActive" nillable="false" type="xs:boolean" />
+					<xs:element name="Description" type="xs:string" />
+					<xs:element name="AddressLine01" type="xs:string" />
+					<xs:element name="AddressLine02" type="xs:string" />
+					<xs:element name="City" type="xs:string" />
+					<xs:element name="State" type="xs:string" />
+					<xs:element name="PostalCode" type="xs:string" />
+					<xs:element name="Country" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:element name="LoadVendorsResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TotalVendorsReceived" type="xs:long" />
+						<xs:element name="TotalVendorsLoaded" type="xs:long" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="LoadVendorsResponse">
+		<wsdl:part element="sch:LoadVendorsResponse" name="LoadVendorsResponse" />
+
+	</wsdl:message>
+	<wsdl:message name="LoadVendorsRequest">
+		<wsdl:part element="sch:LoadVendorsRequest" name="LoadVendorsRequest" />
+
+	</wsdl:message>
+	<wsdl:portType name="Vendor">
+		<wsdl:operation name="LoadVendors">
+			<wsdl:input message="tns:LoadVendorsRequest" name="LoadVendorsRequest" />
+
+			<wsdl:output message="tns:LoadVendorsResponse" name="LoadVendorsResponse" />
+
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="VendorSoap11" type="tns:Vendor">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="LoadVendors">
+			<soap:operation soapAction="" />
+			<wsdl:input name="LoadVendorsRequest">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="LoadVendorsResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="LoadVendorService">
+		<wsdl:port binding="tns:VendorSoap11" name="VendorSoap11">
+			<soap:address
+				location="http://${ws.host}:${ws.port}/${ws.context.path}/soap/loadVendors" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

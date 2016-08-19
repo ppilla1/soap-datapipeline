@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.phasezeroventures.com/dana/vendor/schemas" 
+	xmlns="http://www.phasezeroventures.com/dana/vendor/schemas" 
+	elementFormDefault="qualified">
+	
+	<xs:element name="LoadVendorsRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="vendors" type="Vendor"  maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:complexType name="Vendor">
+		<xs:sequence>
+			<xs:element name="GroupName" type="xs:string" nillable="false"/>
+			<xs:element name="GroupValue" type="xs:string" nillable="false"/>
+			<xs:element name="IsActive" type="xs:boolean" nillable="false"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="AddressLine01" type="xs:string"/>
+			<xs:element name="AddressLine02" type="xs:string"/>
+			<xs:element name="City" type="xs:string"/>
+			<xs:element name="State" type="xs:string"/>
+			<xs:element name="PostalCode" type="xs:string"/>
+			<xs:element name="Country" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="LoadVendorsResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TotalVendorsReceived" type="xs:long"/>
+				<xs:element name="TotalVendorsLoaded" type="xs:long"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
