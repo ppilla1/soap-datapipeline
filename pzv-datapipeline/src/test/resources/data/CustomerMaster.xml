@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns1:CustomerMasterData xmlns:ns1="urn:daa.com:SD:Danamate:CustomerData">
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500230</CustomerNo>
+				<Company>PACCAR INC-HVY AXLE</Company>
+				<Address1>750 HOUSER WAY N</Address1>
+				<City>RENTON</City>
+				<State>WA</State>
+				<Zip>98057</Zip>
+				<Country>US</Country>
+				<Terri></Terri>
+				<Contact>0000003120</Contact>
+				<Name1>PACCAR/PACCAR DIRECT SHIP</Name1>
+				<Name2>EXPORTINV</Name2>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<ShipVia>ABFS</ShipVia>
+				<Terms>Z014</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>39</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500230</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500231</CustomerNo>
+				<Company>WES-T-RANS COMPANY</Company>
+				<Address1>1109 RUSSELL ST</Address1>
+				<City>THUNDER BAY</City>
+				<State>ON</State>
+				<Zip>P7B 5M6</Zip>
+				<Country>CA</Country>
+				<Terri>Z001</Terri>
+				<Contact>0000002708</Contact>
+				<Name1>WES-T-RANS COMPANY</Name1>
+				<Name2>INVOICE</Name2>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<Terms>Z015</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<subChannelCode>02</subChannelCode>
+				<CustomerGroup>K8</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500231</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500232</CustomerNo>
+				<Company>AUTOSALES INC</Company>
+				<Address1>DBA SUMMIT RACING EQUIPMENT</Address1>
+				<City>TALLMADGE</City>
+				<State>OH</State>
+				<Zip>44278</Zip>
+				<Country>US</Country>
+				<Terri>Z003</Terri>
+				<Contact>0000001773</Contact>
+				<Name1>AUTOSALES INC</Name1>
+				<Name2>INVOICE</Name2>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<ShipVia>CNWY</ShipVia>
+				<Terms>Z015</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<subChannelCode>05</subChannelCode>
+				<CustomerGroup>Q1</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500232</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500234</CustomerNo>
+				<Company>FEDERAL-MOGUL CORP</Company>
+				<Address1>VENDOR NUMBER 4006282</Address1>
+				<City>TULSA</City>
+				<State>OK</State>
+				<Zip>74121-1787</Zip>
+				<Country>US</Country>
+				<Terri></Terri>
+				<Contact>0000002195</Contact>
+				<Name1>FEDERAL-MOGUL CORP</Name1>
+				<Name2>INVOICE</Name2>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<ShipVia>CTII2</ShipVia>
+				<Terms>NT30</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>Q1</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500234</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500235</CustomerNo>
+				<Company>CATERPILLAR INC</Company>
+				<Address1>330 SW ADAMS ST</Address1>
+				<City>PEORIA</City>
+				<State>IL</State>
+				<Zip>61630-0235</Zip>
+				<Country>US</Country>
+				<Terri></Terri>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<Terms>NT60</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>31</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500235</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500236</CustomerNo>
+				<Company>CARQUEST SLC 0078</Company>
+				<Address1>1255 SOUTH 3600 WEST STE 800</Address1>
+				<City>SALT LAKE CITY</City>
+				<State>UT</State>
+				<Zip>84108</Zip>
+				<Country>US</Country>
+				<Terri>Z001</Terri>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<Terms>NT90</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<subChannelCode>04</subChannelCode>
+				<CustomerGroup>S5</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500236</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500237</CustomerNo>
+				<Company>CARQUEST ARM 0043</Company>
+				<Address1>215 BUSINESS PARK DR</Address1>
+				<City>ARMONK</City>
+				<State>NY</State>
+				<Zip>10504</Zip>
+				<Country>US</Country>
+				<Terri>Z004</Terri>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<Terms>NT90</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<subChannelCode>04</subChannelCode>
+				<CustomerGroup>S5</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500237</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500238</CustomerNo>
+				<Company>CARQUEST TRUCK PARTS</Company>
+				<Address1>317 W OGLETHORPE BLVD</Address1>
+				<City>ALBANY</City>
+				<State>GA</State>
+				<Zip>31701</Zip>
+				<Country>US</Country>
+				<Terri>Z004</Terri>
+				<Contact>0000001890</Contact>
+				<Name1>CARQUEST TRUCK PARTS</Name1>
+				<Name2>INVOICE</Name2>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<ShipVia>FXFE1</ShipVia>
+				<Terms>NT90</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<subChannelCode>04</subChannelCode>
+				<CustomerGroup>S5</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500238</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500239</CustomerNo>
+				<Company>CARQUEST TOR 0061</Company>
+				<Address1>35 WORCESTER ROAD</Address1>
+				<City>REXDALE</City>
+				<State>ON</State>
+				<Zip>M9W 1K9</Zip>
+				<Country>CA</Country>
+				<Terri>Z004</Terri>
+				<Contact>0000002450</Contact>
+				<Name1>CARQUEST TOR 0061</Name1>
+				<Name2>INVOICE</Name2>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<ShipVia>OVLD</ShipVia>
+				<Terms>NT90</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<subChannelCode>02</subChannelCode>
+				<CustomerGroup>S5</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500239</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500240</CustomerNo>
+				<Company>CARQUEST MAR 0026</Company>
+				<Address1>1906 N PEACH AVE</Address1>
+				<City>MARSHFIELD</City>
+				<State>WI</State>
+				<Zip>54449</Zip>
+				<Country>US</Country>
+				<Terri>Z001</Terri>
+				<Contact>0000002436</Contact>
+				<Name1>CARQUEST MAR 0026</Name1>
+				<Name2>INVOICE</Name2>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<ShipVia>CNWY</ShipVia>
+				<Terms>NT90</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<subChannelCode>04</subChannelCode>
+				<CustomerGroup>S5</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500240</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500241</CustomerNo>
+				<Company>CARQUEST MEM 0007</Company>
+				<Address1>7337 AIRWAYS BLVD</Address1>
+				<City>SOUTHAVEN</City>
+				<State>MS</State>
+				<Zip>38671</Zip>
+				<Country>US</Country>
+				<Terri>Z004</Terri>
+				<Contact>0000002437</Contact>
+				<Name1>CARQUEST MEM 0007</Name1>
+				<Name2>INVOICE</Name2>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<ShipVia>EXLA</ShipVia>
+				<Terms>NT90</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<subChannelCode>04</subChannelCode>
+				<CustomerGroup>S5</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500241</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500242</CustomerNo>
+				<Company>CARQUEST LEX 0009</Company>
+				<Address1>1989 GEORGETOWN RD.</Address1>
+				<City>LEXINGTON</City>
+				<State>KY</State>
+				<Zip>40511</Zip>
+				<Country>US</Country>
+				<Terri>Z004</Terri>
+				<Contact>0000002435</Contact>
+				<Name1>CARQUEST LEX 0009</Name1>
+				<Name2>INVOICE</Name2>
+				<Channel>30</Channel>
+				<Status>1</Status>
+				<ShipVia>EXLA</ShipVia>
+				<Terms>NT90</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<subChannelCode>04</subChannelCode>
+				<CustomerGroup>S5</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500242</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500243</CustomerNo>
+				<Company>CASE LLC</Company>
+				<Address1>260 HIGHWAY 12 SE</Address1>
+				<City>BENSON</City>
+				<State>MN</State>
+				<Zip>56215</Zip>
+				<Country>US</Country>
+				<Terri></Terri>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<ShipVia>FXFE1</ShipVia>
+				<Terms>Z000</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>M3</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500243</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500244</CustomerNo>
+				<Company>CNH America LLC</Company>
+				<Address1>Sps Accounts Payable Dept</Address1>
+				<City>Racine</City>
+				<State>WI</State>
+				<Zip>53404</Zip>
+				<Country>US</Country>
+				<Terri></Terri>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<ShipVia>CNWY</ShipVia>
+				<Terms>Z014</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>M3</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500244</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500245</CustomerNo>
+				<Company>VOLVO TRUCKS NA/HARD PARTS</Company>
+				<Address1>HARD PARTS PROGRAM</Address1>
+				<City>GREENSBORO</City>
+				<State>NC</State>
+				<Zip>27402</Zip>
+				<Country>US</Country>
+				<Terri></Terri>
+				<Contact>0000002280</Contact>
+				<Name1>VOLVO TRUCKS NA/HARD PARTS</Name1>
+				<Name2>EXPORTINV</Name2>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<Terms>NT30</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>L4</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500245</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500246</CustomerNo>
+				<Company>VOLVO TRUCKS NA/EXPRESS DELIVE</Company>
+				<Address1>EMERGENCY DOWN ORDERS</Address1>
+				<City>GREENSBORO</City>
+				<State>NC</State>
+				<Zip>27402</Zip>
+				<Country>US</Country>
+				<Terri></Terri>
+				<Contact>0000002282</Contact>
+				<Name1>VOLVO TRUCKS NA/EXPRESS DELIVE</Name1>
+				<Name2>EXPORTINV</Name2>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<ShipVia>CNWY</ShipVia>
+				<Terms>NT30</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>L4</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500246</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500247</CustomerNo>
+				<Company>VOLVO BUS AFTERMARKET OPER.</Company>
+				<Address1>540-B WOODLAKE CIRCLE</Address1>
+				<City>CHESAPEAKE</City>
+				<State>VA</State>
+				<Zip>23320</Zip>
+				<Country>US</Country>
+				<Terri></Terri>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<Terms>NT30</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>L4</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500247</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500248</CustomerNo>
+				<Company>Volvo Group North America LLC</Company>
+				<Address1>C/O VPNA/VCE</Address1>
+				<City>Greensboro</City>
+				<State>NC</State>
+				<Zip>27402-6114</Zip>
+				<Country>US</Country>
+				<Terri>Z003</Terri>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<ShipVia>CTII2</ShipVia>
+				<Terms>NT30</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>L4</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500248</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500249</CustomerNo>
+				<Company>Volvo Const. Eq. North America Inc.</Company>
+				<Address1>C/O Volvo Business Services</Address1>
+				<City>Greensboro</City>
+				<State>NC</State>
+				<Zip>27402-6114</Zip>
+				<Country>US</Country>
+				<Terri>Z003</Terri>
+				<Contact>0000001567</Contact>
+				<Name1>Volvo Const. Eq. North America Inc.</Name1>
+				<Name2>ASN</Name2>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<ShipVia>CTII2</ShipVia>
+				<Terms>NT30</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>L4</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500249</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+	<Statement>
+		<dbTableName action="UPDATE_INSERT">
+			<table>mate_CustomerMaster_Staging</table>
+			<access>
+				<CustomerNo>0000500305</CustomerNo>
+				<Company>PACCAR INC-HVY AXLE</Company>
+				<Address1>750 HOUSER WAY N</Address1>
+				<City>RENTON</City>
+				<State>WA</State>
+				<Zip>98057</Zip>
+				<Country>US</Country>
+				<Terri></Terri>
+				<Contact>0000003118</Contact>
+				<Name1>PACCAR INC-HVY AXLE</Name1>
+				<Name2>EXPORTINV</Name2>
+				<Channel>20</Channel>
+				<Status>1</Status>
+				<ShipVia>ABFS</ShipVia>
+				<Terms>Z014</Terms>
+				<Frieght>COL</Frieght>
+				<isShipOnly>0</isShipOnly>
+				<isHold>0</isHold>
+				<canBackOrder>0</canBackOrder>
+				<isInternal>0</isInternal>
+				<isVolvo>0</isVolvo>
+				<HandCode1>Z001</HandCode1>
+				<CustomerGroup>39</CustomerGroup>
+				<CustomerPriceGroup></CustomerPriceGroup>
+			</access>
+			<key>
+				<CustomerNo>0000500305</CustomerNo>
+			</key>
+		</dbTableName>
+	</Statement>
+</ns1:CustomerMasterData>
